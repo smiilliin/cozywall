@@ -132,10 +132,6 @@ audio.onloadeddata = () => {
 };
 
 audio.onended = () => {
-  if (!repeat && currentAudioURL) {
-    URL.revokeObjectURL(currentAudioURL);
-    currentAudioURL = null;
-  }
   playButton.className = "material-symbols-outlined";
   stopButton.className = "material-symbols-outlined hidden";
 };
