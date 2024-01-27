@@ -167,9 +167,10 @@ const updateBalls = () => {
   }
 };
 updateBalls();
-window.onresize = () => {
+window.addEventListener("resize", () => {
+  app.renderer.resize(window.innerWidth, window.innerHeight);
   updateBalls();
-};
+});
 
 let lastMs = Date.now();
 app.ticker.add(() => {
